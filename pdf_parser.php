@@ -44,7 +44,9 @@ if (!defined ('PDF_TYPE_BOOLEAN'))
 if (!defined ('PDF_TYPE_REAL'))
     define ('PDF_TYPE_REAL', 12);
     
-require_once('pdf_context.php');
+	// David Bruehlmeier (dbruehlmeier), typo3@bruehlmeier.com: Added 2009-05-20
+	// Includes the proper classes from the extension
+require_once(t3lib_extMgm::extPath('fpdf').'pdf_context.php');    
 
 class pdf_parser {
 	

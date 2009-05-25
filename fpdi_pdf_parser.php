@@ -17,7 +17,9 @@
 //  limitations under the License.
 //
 
-require_once('pdf_parser.php');
+	// David Bruehlmeier (dbruehlmeier), typo3@bruehlmeier.com: Added 2009-05-20
+	// Includes the proper class from the extension
+require_once(t3lib_extMgm::extPath('fpdf').'pdf_parser.php');
 
 class fpdi_pdf_parser extends pdf_parser {
 

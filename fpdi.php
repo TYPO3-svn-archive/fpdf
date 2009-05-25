@@ -21,11 +21,15 @@ define('FPDI_VERSION','1.3');
 
 // Check for TCPDF and remap TCPDF to FPDF
 if (class_exists('TCPDF')) {
-    require_once('fpdi2tcpdf_bridge.php');
+		// David Bruehlmeier (dbruehlmeier), typo3@bruehlmeier.com: Added 2009-05-20
+		// Includes the proper class from the extension
+	require_once(t3lib_extMgm::extPath('fpdf').'fpdi2tcpdf_bridge.php');
 }
 
-require_once('fpdf_tpl.php');
-require_once('fpdi_pdf_parser.php');
+	// David Bruehlmeier (dbruehlmeier), typo3@bruehlmeier.com: Added 2009-05-20
+	// Includes the proper classes from the extension
+require_once(t3lib_extMgm::extPath('fpdf').'fpdf_tpl.php');
+require_once(t3lib_extMgm::extPath('fpdf').'fpdi_pdf_parser.php');
 
 
 class FPDI extends FPDF_TPL {
